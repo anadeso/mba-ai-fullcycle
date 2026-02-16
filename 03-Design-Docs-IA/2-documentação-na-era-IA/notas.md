@@ -1,362 +1,332 @@
-## Documentação na era da IA
+Perfeito. Vou reescrever **tudo**, já reorganizado, mais hierárquico, sem repetições desnecessárias e com fluxo lógico mais claro — mantendo todo o conteúdo essencial, mas mais estruturado.
 
-Na era da Inteligência Artificial, a documentação deixou de ser apenas um complemento do projeto e passou a fazer parte ativa do desenvolvimento de software.
+---
 
-Hoje, a IA consegue ler a documentação e utilizá-la como contexto para gerar código, planejar funcionalidades, fazer manutenção e evitar erros — assim como testes automatizados evitam regressões ao longo do tempo. Ou seja, a documentação se torna um ativo estratégico e duradouro do projeto.
+# Documentação na Era da Inteligência Artificial
 
-Cada novo chat com a IA pode ser visto como a chegada de um “novo funcionário”. Para que ele entenda o projeto rapidamente, além do código, ele precisa de uma documentação clara. Isso traz mais assertividade no desenvolvimento e mais segurança para o time.
+## 1. A nova função da documentação
 
-Além disso, a própria IA pode ajudar a criar e melhorar a documentação de forma mais rápida e eficiente. E mais importante: ela pode manter a documentação atualizada automaticamente dentro do workflow. Sempre que uma feature for criada ou alterada, a IA pode atualizar os documentos correspondentes.
+Na era da Inteligência Artificial, a documentação deixou de ser apenas um registro complementar do projeto. Ela passou a ser parte ativa do desenvolvimento de software.
 
-Assim, a documentação finalmente pode se tornar um documento vivo de verdade — integrada ao fluxo de desenvolvimento, sendo criada, utilizada e atualizada continuamente com apoio da IA.
+Hoje, modelos de IA conseguem ler documentos para:
 
-## Tipos de documentação e Design Docs
-Nem toda documentação é igual — e entender essa diferença é essencial. Em um projeto de software, existem diferentes categorias de documentos, cada uma com um papel específico:
+* Gerar código com contexto adequado
+* Planejar funcionalidades
+* Sugerir melhorias
+* Evitar erros e regressões
+* Atualizar artefatos automaticamente
 
-* **Produto** → define *o quê* está sendo construído e *por quê*.
-* **Design e Arquitetura** → define *como* o sistema será construído.
-* **Infraestrutura** → define *onde* e *com o quê* o sistema será executado.
-* **Operacional** → define *como manter* a aplicação.
-* **Conhecimento e Referência** → define *como trabalhar* no projeto.
+Assim como testes automatizados protegem o sistema ao longo do tempo, a documentação agora protege contexto, intenção e decisões.
 
-O ponto central é que **design docs não são qualquer documento**, nem um único arquivo isolado. Eles são um **conjunto de documentações técnicas** que explicam como o software é desenhado, provisionado, mantido e guiado por boas práticas.
+Cada novo chat com IA pode ser visto como a chegada de um novo integrante no time. Para que ele contribua com qualidade, não basta ter código — é necessário contexto claro. A documentação cumpre esse papel.
 
-Enquanto a documentação de produto foca na visão estratégica (*o quê e por quê*), os **design docs** estão no nível técnico — cobrindo arquitetura, infraestrutura, operação e padrões de trabalho.
+Além disso, a própria IA pode:
 
-Ter clareza sobre essas categorias evita confusão e melhora a comunicação do time. Cada tipo de documento tem um objetivo diferente dentro do projeto.
+* Criar documentação
+* Melhorar textos existentes
+* Atualizar arquivos após mudanças de feature
+* Gerar versões estruturadas para automação
 
-Na disciplina, o foco está justamente em entender:
+A documentação se torna, de fato, um documento vivo integrado ao fluxo de desenvolvimento.
 
-* quais são os principais design docs,
-* quando usar cada um,
-* qual o tamanho adequado,
-* como estruturá-los,
-* e como gerar e manter tudo isso com apoio da IA.
+---
 
-Com Inteligência Artificial e Prompt Engineering, é possível criar, atualizar e evoluir esses documentos de forma inteligente e integrada ao fluxo de desenvolvimento.
+# Tipos de Documentação em Software
 
-Em resumo: **design docs são a base técnica estruturada do projeto — e, com IA, eles se tornam muito mais estratégicos e eficientes.**
+Nem toda documentação tem o mesmo propósito. Em um projeto de software, podemos separar os principais tipos em categorias:
 
-## PRDs - Product Requirement Document
-O PRD é um documento focado em produto. Ele define e contextualiza o que será construído, qual valor será entregue e por que aquilo existe. Mesmo não sendo um design doc técnico, ele é extremamente importante — especialmente na era da IA — porque fornece o contexto necessário para que a inteligência artificial entenda o projeto.
+| Categoria                 | Pergunta que responde |
+| ------------------------- | --------------------- |
+| Produto                   | O que e por quê       |
+| Design e Arquitetura      | Como                  |
+| Infraestrutura            | Onde                  |
+| Operacional               | Como manter           |
+| Conhecimento e Referência | Como trabalhar        |
 
-O principal objetivo de um PRD é alinhar produto e time técnico. Ele deve existir quando há uma entrega clara de valor para o usuário ou para o negócio. Pode representar:
+Entender essa divisão evita confusão e melhora a comunicação do time.
 
-Um produto inteiro
+---
 
-Um módulo (ou EPIC)
+## Design Docs
 
-Uma feature muito relevante
+Design docs não são um único documento isolado. Eles representam um conjunto estruturado de documentos técnicos que explicam:
 
-Mas atenção: nem toda feature merece um PRD. Apenas aquelas que são estratégicas, complexas ou entregam alto valor percebido. Quando algo deixa de ser apenas um requisito funcional e passa a ter objetivos, métricas e impacto próprio, faz sentido tratá-lo como um “subproduto” — e, nesse caso, criar um PRD.
+* Arquitetura do sistema
+* Decisões técnicas
+* Infraestrutura
+* Estratégias de operação
+* Padrões e boas práticas
+* Trade-offs
 
-Outro ponto importante é que existem níveis de PRD, dependendo da granularidade:
+Enquanto a documentação de produto foca na visão estratégica, os design docs operam no nível técnico.
 
-PRD de alto nível → visão geral do produto.
+Eles são a base estruturada que permite que tanto o time quanto a IA entendam como o sistema foi pensado e como deve evoluir.
 
-PRD de módulo/EPIC → detalha uma grande parte do sistema.
+---
 
-PRD de feature estratégica → foca em algo altamente relevante.
+# PRD – Product Requirement Document
 
-Mesmo sendo um documento de produto, ele pode e deve conter informações técnicas quando necessário para alinhar expectativas.
+O PRD é um documento de produto. Ele define o que será construído, por que aquilo existe e qual valor será entregue.
 
-Na prática, o PRD é um documento de contextualização estratégica. Para humanos, pode parecer óbvio documentar algo que o time já conhece. Mas para a IA, esse contexto é essencial. Quanto melhor o PRD, mais assertiva será a geração de código, planejamento e decisões técnicas.
+Ele não é um design doc técnico, mas orienta os design docs.
 
-Em resumo:
-PRD não é um design doc, mas é a base contextual que orienta os design docs e melhora significativamente o uso da IA no desenvolvimento.
+Na era da IA, o PRD se torna ainda mais relevante, porque fornece o contexto estratégico que a IA precisa para gerar código alinhado ao objetivo real do produto.
 
-### Seções de um PRD
-Um **PRD é flexível** — não existe um modelo rígido obrigatório. Nem todo projeto precisa de todas as seções, especialmente projetos menores. O importante é entender os blocos mais comuns e usar o que fizer sentido.
+---
 
-As principais seções normalmente incluem:
+## Objetivo do PRD
 
-* **Visão e propósito** → explica a ideia central do produto e por que ele existe.
-* **Contexto e oportunidade** → mostra qual problema está sendo resolvido e qual benefício isso traz para a empresa.
-* **Público e personas** → define quem será impactado ou utilizará o produto.
-* **Objetivos e métricas** → deixa claro o que se quer alcançar e como medir sucesso (KPIs).
-* **Escopo** → define o que está dentro e o que está fora do projeto.
-* **Requisitos de alto nível** → descrevem as grandes capacidades do sistema (macro funcionalidades).
-* **Estratégia e fases** → como o produto será desenvolvido ao longo do tempo.
-* **Riscos** → possíveis problemas ou incertezas.
-* **KPIs** → indicadores de desempenho para acompanhar evolução e sucesso.
-* **Stakeholders** → todas as pessoas envolvidas ou impactadas pelo projeto.
+Um PRD deve alinhar produto e time técnico. Ele responde perguntas como:
 
-O ponto central é que um PRD organiza a visão estratégica do produto: define propósito, valor, limites e critérios de sucesso. Ele não entra em detalhes técnicos profundos, mas estrutura o entendimento do que será construído e como medir se deu certo.
-
-Em resumo:
-**O PRD organiza visão, valor, escopo e métricas — servindo como guia estratégico antes da execução técnica.**
-
-### PRDs de Alto Nível
-O **PRD de alto nível** é um documento macro, usado principalmente em projetos grandes. Ele não entra em detalhes técnicos — ele contextualiza estrategicamente o produto como um todo.
-
-Esse tipo de PRD responde perguntas essenciais como:
-
-* Por que o produto existe?
-* O que queremos alcançar?
-* O que está dentro e fora do escopo?
-* Para quem estamos construindo?
+* Por que essa feature existe?
 * Qual problema estamos resolvendo?
-* Como vamos atingir os objetivos?
-* Como saberemos se deu certo?
-* Quais são os riscos?
-* Qual o roadmap?
-* Quem está envolvido?
-* Como isso se conecta à estratégia da empresa?
+* Qual valor será entregue?
+* Como saberemos que deu certo?
 
-Perceba que muitas dessas perguntas são estratégicas e, em muitos casos, vêm de decisões da alta gestão. Mesmo que você seja desenvolvedor e não participe dessas decisões, entender essas respostas é fundamental. Se você não consegue responder essas perguntas, provavelmente não tem clareza suficiente sobre o projeto.
+Nem toda funcionalidade precisa de um PRD. Apenas aquelas que possuem relevância estratégica, complexidade significativa ou impacto mensurável.
 
-O PRD de alto nível garante alinhamento, direção e propósito antes da execução. Ele define a visão ampla do produto e serve como base para decisões futuras — inclusive para que a IA compreenda o contexto geral.
-
-Em resumo:
-**O PRD de alto nível é o mapa estratégico do produto — ele traz clareza sobre propósito, valor, direção e sucesso antes da construção começar.**
-
-### PRDs de feature e caso de uso
-Aqui vai o resumo sobre **PRDs de Feature e Caso de Uso**:
-
-Além do **PRD de alto nível**, que traz a visão estratégica do produto como um todo, também existem **PRDs de nível mais baixo**, focados em módulos ou features específicas.
-
-A diferença está na **relevância e impacto da feature**.
-
-#### Quando NÃO vale criar um PRD de feature
-
-Se a funcionalidade é apenas um requisito técnico padrão — algo comum, já resolvido por frameworks e que não envolve decisões estratégicas de produto — então ela não precisa de um PRD próprio.
-
-Exemplo:
-
-* Um sistema de login simples e padrão.
-* Apenas autenticação básica necessária para acessar a plataforma.
-* Nenhuma inovação, diferencial ou impacto estratégico.
-
-Nesse caso, o login é apenas um requisito funcional dentro de um PRD maior.
+Quando uma feature deixa de ser apenas um requisito funcional e passa a ter objetivos, métricas e impacto próprio, ela pode ser tratada como um “subproduto”.
 
 ---
 
-#### Quando vale criar um PRD de feature
+# Níveis de PRD
 
-Se a feature:
+Existem diferentes níveis de granularidade.
 
-* Envolve decisões estratégicas de produto
-* Impacta experiência do usuário
-* Tem métricas próprias
-* Envolve riscos, compliance ou integrações complexas
-* Pode ser considerada quase um “subproduto”
+## 1. PRD de Alto Nível
 
-Então ela merece um PRD próprio.
+Documento macro que descreve o produto como um todo. Ele aborda:
 
-Exemplo:
+* Visão estratégica
+* Objetivos globais
+* Público-alvo
+* Escopo geral
+* Roadmap
+* KPIs
+* Riscos
+* Stakeholders
 
-* Plataforma multi-tenant com SSO, OAuth, 2FA, políticas corporativas.
-* Sistema de autenticação que impacta segurança, onboarding e compliance.
-* Algo que pode ser usado por múltiplos sistemas e clientes.
-
-Nesse cenário, o login deixa de ser um simples requisito técnico e se torna uma **feature estratégica com valor de negócio**.
+Ele garante alinhamento antes da execução técnica começar.
 
 ---
 
-#### Ideia central
+## 2. PRD de Módulo ou EPIC
 
-Nem toda feature merece um PRD.
+Focado em uma grande parte do sistema.
+Mais detalhado que o PRD macro, mas ainda estratégico.
 
-Mas quando uma feature deixa de ser apenas um requisito funcional e passa a ter impacto estratégico, métricas próprias e decisões relevantes de produto, ela deve ser tratada como um “produto dentro do produto”.
+---
 
-Em resumo:
-**PRDs de feature existem quando a funcionalidade tem peso estratégico — não apenas técnico.**
+## 3. PRD de Feature Estratégica
 
-### Principais seções em um PRD de Feature
-O PRD de feature é mais enxuto que o PRD de alto nível, mas ainda mantém uma estrutura organizada. Ele é flexível — nem sempre precisa conter todas as seções — porém, em projetos mais relevantes, normalmente inclui os seguintes blocos:
+Utilizado quando a funcionalidade:
 
-* **Resumo da feature** → explica o que será desenvolvido, o problema que resolve e o contexto.
-* **Objetivo principal** → metas claras em bullet points, sempre acompanhadas de métricas.
-* **Escopo** → define o que entra e o que fica de fora.
-* **Requisitos funcionais** → funcionalidades e comportamentos esperados.
-* **Requisitos não funcionais** → critérios quantitativos como performance, latência, disponibilidade, segurança etc.
-* **Fluxo do usuário** → como a feature será utilizada na prática.
-* **Dependências** → sistemas, módulos ou recursos necessários para funcionar.
-* **Critérios de aceitação** → checklist que define quando a entrega está concluída.
-* **Riscos** → possíveis problemas ou desafios.
-* **Considerações gerais** → observações importantes adicionais.
+* Impacta fortemente a experiência do usuário
+* Possui métricas próprias
+* Envolve riscos relevantes
+* Exige decisões de produto importantes
+* Pode ser considerada quase um “produto dentro do produto”
 
-Esse tipo de PRD já se aproxima mais do dia a dia técnico, pois conversa diretamente com desenvolvimento.
+### Quando NÃO criar um PRD de feature
 
-Embora não seja um design doc técnico formal, o PRD de feature é essencial para contextualizar — tanto para o time quanto para a IA. Ele garante clareza sobre propósito, limites, metas e critérios de sucesso antes da implementação começar.
+Se for apenas um requisito técnico padrão, já resolvido por frameworks e sem impacto estratégico, não é necessário criar um PRD separado.
 
-Em resumo:
-**O PRD de feature organiza contexto, objetivos e critérios práticos para transformar uma ideia relevante em entrega estruturada.**
+Exemplo: autenticação simples sem diferenciação.
 
-### Exemplo 1 de PRD
-Exemplo de PRD para Feature (Catálogo de eCommerce): 
+---
 
-O professor apresenta um **exemplo prático de PRD de feature** para tangibilizar a teoria. O caso é um **catálogo de produtos para um e-commerce próprio**, mostrando como estruturar um PRD de forma clara e objetiva, sem ser excessivamente longo.
+# Estrutura de um PRD
 
-O documento inclui:
+PRDs são flexíveis. Nem todo projeto precisa de todas as seções. Porém, normalmente incluem:
 
-* **Resumo da feature** → explica que o catálogo será a fonte única de verdade dos produtos (descrição, preço, estoque, variações), com APIs para vitrine e checkout e painel interno para o time comercial.
+## Estrutura comum em PRD de Alto Nível
 
-* **Contexto do problema** → hoje não existe base centralizada; planilhas causam divergência; produtos esgotados continuam visíveis; falta controle consistente.
+* Visão e propósito
+* Contexto e oportunidade
+* Público e personas
+* Objetivos e métricas
+* Escopo (inclusões e exclusões)
+* Estratégia e fases
+* Riscos
+* KPIs
+* Stakeholders
 
-* **Cenários de uso** → cliente navega na vitrine; checkout consulta dados atualizados; time comercial altera preço/estoque com reflexo imediato.
+Esse formato organiza a visão estratégica antes da execução.
 
-* **Objetivos e métricas** → tornar o catálogo a fonte oficial (meta: 100% da loja usar o catálogo), reduzir itens indisponíveis visíveis, acelerar atualização de produtos.
+---
 
-* **Escopo e fora do escopo** → define claramente o que será construído (estrutura de produto, APIs, painel administrativo etc.) e o que não faz parte (checkout, frete, regras fiscais, CMS avançado).
+## Estrutura comum em PRD de Feature
 
-* **Requisitos funcionais (RFs)** → funcionalidades numeradas para facilitar rastreabilidade e uso com IA.
+* Resumo da feature
+* Objetivos com métricas
+* Escopo
+* Requisitos funcionais
+* Requisitos não funcionais
+* Fluxo do usuário
+* Dependências
+* Riscos
+* Critérios de aceitação
+* Considerações gerais
 
-* **Requisitos não funcionais** → performance (ex: P95 < 150ms), disponibilidade 99,9%, segurança, observabilidade etc.
+Esse modelo já se aproxima mais do dia a dia técnico.
 
-* **Arquitetura e componentes** → microserviço dedicado, API em Go, PostgreSQL, painel em Next.js, integrações.
+---
 
-* **Trade-offs, dependências e riscos** → decisões técnicas, possíveis falhas e estratégias de mitigação.
+# Exemplos Práticos
 
-* **Critérios de aceitação** → checklist final para garantir que tudo foi implementado e validado.
+## Exemplo 1 – Catálogo de eCommerce
 
-A mensagem central é: **sim, dá trabalho**, mas esse documento vira um ativo estratégico. Ele organiza pensamento, alinha time e melhora drasticamente o contexto para a IA trabalhar com mais precisão.
+Feature: catálogo centralizado de produtos.
 
-Em resumo:
-Esse exemplo mostra como um PRD de feature bem estruturado conecta problema, escopo, métricas e arquitetura — transformando uma ideia em uma entrega técnica clara e mensurável.
+### Problema
 
-### Exemplo 2  de PRD e JSON Opcional
-Exemplo para Feature (Rate Limiter): 
+* Ausência de fonte única de verdade
+* Uso de planilhas
+* Divergência de estoque
+* Produtos esgotados visíveis
 
-Aqui vai o resumo:
+### Objetivos
 
-O exemplo apresenta um **PRD de feature para um Rate Limiter centralizado**, que será utilizado por todos os microserviços da plataforma para controlar requisições por chave de API e IP, evitando sobrecarga.
-
-### Objetivo
-
-Garantir disponibilidade do sistema, reduzir indisponibilidade (meta: menos de 1 minuto), priorizar clientes premium e limitar abuso (monitorando erros 429), mantendo latência P95 abaixo de 150 ms(95% das requisições devem responder em até 150 milissegundos).
-
-### Contexto
-
-Voltado para times de desenvolvimento e DevOps, atendendo microserviços internos e APIs públicas.
+* Tornar o catálogo a fonte oficial
+* Reduzir inconsistências
+* Atualizar dados em tempo real
 
 ### Escopo
 
-**Incluso:**
+Incluso:
 
-* Limite por API Key e IP
-* Controle de burst e janela deslizante
-* Retorno de erro 429 com headers padrão
+* Estrutura de produto
+* APIs para vitrine e checkout
+* Painel administrativo
 
-**Fora do escopo:**
+Fora do escopo:
+
+* Checkout
+* Frete
+* CMS avançado
+
+### Requisitos
+
+* Funcionais numerados
+* Requisitos de performance
+* Disponibilidade
+* Segurança
+* Observabilidade
+
+### Arquitetura
+
+* Microserviço dedicado
+* API em Go
+* PostgreSQL
+* Painel em Next.js
+
+Esse exemplo mostra como um PRD organiza pensamento, escopo e decisões técnicas antes da implementação.
+
+---
+
+## Exemplo 2 – Rate Limiter Centralizado
+
+Feature para controle de requisições por API Key e IP.
+
+### Objetivo
+
+* Garantir disponibilidade
+* Reduzir indisponibilidade
+* Priorizar clientes premium
+* Monitorar erros 429
+* Manter latência P95 abaixo de 150ms (95% das requisições devem responder em até 150 milissegundos)
+
+### Escopo
+
+Incluso:
+
+* Limite por chave e IP
+* Controle de burst
+* Janela deslizante
+* Headers padrão
+
+Fora do escopo:
 
 * Console administrativo
 * Multi-região
 * Fila de prioridade
 
-### Requisitos
-
-* **Funcionais:** definição clara do fluxo (requisição → verificação → bloqueio ou liberação), controle de burst, headers padrão.
-* **Não funcionais:** performance, disponibilidade, segurança, observabilidade, compliance.
-
 ### Arquitetura
 
 * Microserviço dedicado
 * Backend em Go
-* Redis como storage de contadores
+* Redis como storage
 * Observabilidade com Prometheus e OpenTelemetry
 * Integração via REST
-
-### Trade-offs e Dependências
-
-* Uso de Redis como principal armazenamento
-* Dependência de DevOps e dos times consumidores
 
 ### Riscos
 
 * Redis indisponível
-* Configurações incorretas bloqueando clientes legítimos
-
-### Critérios de Aceitação
-
-Checklist validado com testes e exemplos (inclusive em JSON).
+* Configuração incorreta bloqueando usuários legítimos
 
 ---
 
-### Ponto central
+# Markdown e JSON
 
-O grande diferencial aqui é o uso de **prompt para gerar o PRD tanto em Markdown (leitura humana) quanto em JSON (leitura estruturada para IA e agentes)**.
+Um diferencial importante na era da IA é gerar o PRD em dois formatos:
+
+1. Markdown → leitura humana
+2. JSON estruturado → leitura por IA e automações
 
 Isso permite:
 
-* Melhor comunicação entre agentes de IA
+* Comunicação entre agentes
+* Validação automática
 * Menos ambiguidade
-* Automação de validações e integrações
-
-Em resumo:
-Esse exemplo mostra como um PRD técnico bem estruturado organiza contexto, arquitetura, métricas e riscos — e como gerar versões em Markdown e JSON potencializa o uso com IA e automações.
-
-### Prompt para geração de PRD
-Prompt de Entrevista para Gerar PRD para desenvolvimento de Feature: 
-
-Aqui vai o resumo:
-
-O autor apresenta um **prompt estruturado para gerar PRDs por meio de entrevista guiada pela IA**. A proposta é simples: você cola o prompt em uma IA, pede para iniciar a entrevista e ela conduz todo o processo passo a passo até gerar um PRD completo.
-
-### Objetivo do prompt
-
-Gerar um PRD de feature que explique:
-
-* **Por que** a feature existe
-* **O que** ela deve fazer
-* **Como saberemos que está pronta**
-* **Onde** será implementada
-
-Ao final, o documento é entregue em **Markdown (português)** e a IA pergunta se o usuário deseja também a versão em **JSON estruturado** (com chaves em inglês).
+* Integração com workflows
 
 ---
 
-### Como funciona
+# Prompt para Geração de PRD
 
-O prompt segue um modelo de **entrevista step-by-step**, cobrindo:
+É possível estruturar um prompt de entrevista para que a IA gere um PRD passo a passo.
 
-1. Contexto e visão
+## Como funciona
+
+O prompt conduz uma entrevista cobrindo:
+
+1. Contexto
 2. Problema
 3. Oportunidade
 4. Objetivos
 5. Métricas
 6. Escopo
-7. Requisitos funcionais e não funcionais
+7. Requisitos
 8. Arquitetura
 9. Trade-offs
 10. Dependências
-11. Riscos e mitigações
+11. Riscos
 
-Em cada etapa, a IA:
+A IA:
 
 * Faz perguntas específicas
-* Resume o que entendeu
-* Pede confirmação antes de avançar
+* Resume o entendimento
+* Pede confirmação
+* Evita inventar detalhes
+* Sugere respostas quando necessário
+* Aplica valores padrão inteligentes
 
-Ela também armazena internamente as respostas em JSON (sem mostrar ao usuário) e valida consistência antes de gerar o resultado final.
+Ao final, gera:
 
----
-
-### Regras importantes do prompt
-
-* Não fazer perguntas duplas
-* Não inventar detalhes técnicos
-* Sugerir respostas para facilitar
-* Usar linguagem clara e direta
-* Aplicar valores padrão inteligentes quando necessário (ex: P95 < 150ms)
+* PRD em Markdown
+* Opção de versão estruturada em JSON
 
 ---
 
-### Diferencial
+# Conclusão
 
-O grande valor está em:
+A documentação deixou de ser um registro burocrático e passou a ser um ativo estratégico.
 
-* Produzir PRD em **formato humano (Markdown)**
-* Produzir PRD em **formato estruturado (JSON)**
-* Permitir uso com agentes de IA
-* Reduzir ambiguidades
-* Evitar geração de código fora do escopo
+O PRD organiza propósito, escopo e métricas antes da execução técnica.
+Os design docs estruturam como o sistema será construído.
+A IA potencializa ambos — tanto na criação quanto na manutenção.
 
----
+Quanto melhor o contexto documentado, maior a precisão da IA e menor o risco de gerar código desalinhado.
 
-### Mensagem central
-
-Mesmo não sendo um design doc, o PRD é fundamental para dar contexto à IA. Quanto melhor o PRD, menos código desalinhado ou fora do escopo será gerado.
-
-Em resumo:
-O prompt transforma a criação de PRDs em um processo guiado, estruturado e automatizável — tornando algo complexo mais leve, consistente e muito mais útil para humanos e para IA.
+Documentação bem estruturada não é custo.
+É aceleração com controle.
